@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: [
@@ -36,8 +37,13 @@ module.exports = {
     contentBase: path.join(__dirname, "public/"),
     port: 8001,
     publicPath: "http://localhost:8001/dist/",
+    //for react router routes:
+    historyApiFallback: true,
     // hotOnly: true,
     // hotOnly: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new Dotenv({path: "../.env"})
+  ]
 };

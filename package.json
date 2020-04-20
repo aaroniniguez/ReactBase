@@ -23,6 +23,7 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.4.1",
     "css-loader": "^3.5.2",
+    "dotenv-webpack": "^1.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "reactstrap": "^8.4.1",
